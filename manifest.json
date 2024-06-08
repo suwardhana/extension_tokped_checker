@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Tokopedia Stock Checker",
+  "description": "Base Level Extension",
+  "version": "1.0",
+  "action": {
+    "default_popup": "tokopedia.html",
+    "default_icon": "assets/icon.png",
+    "default_popup_width": "700px"
+  },
+  "permissions": ["activeTab", "storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["background.js"]
+    }
+  ]
+}
